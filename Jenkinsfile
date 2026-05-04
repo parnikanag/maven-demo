@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps { 
-                git 'https://github.com/parnikanag/maven-demo' 
+               git url:'https://github.com/parnikanag/maven-demo' , branch: 'main'
             }
         }
         stage('Build') {
