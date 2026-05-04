@@ -1,10 +1,14 @@
 pipeline {
     agent any
+    
+    tools {
+        maven 'M3' // This name must exactly match the name you typed in Jenkins Tools
+    }
 
     stages {
         stage('Checkout') {
             steps { 
-                checkout scm
+                git 'https://github.com/parnikanag/maven-demo' 
             }
         }
         stage('Build') {
